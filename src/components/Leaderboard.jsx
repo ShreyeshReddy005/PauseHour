@@ -54,7 +54,7 @@ const Leaderboard = ({ onClose }) => {
       <div className="container" style={{ maxWidth: '1000px' }}>
         
         {/* Header Block */}
-        <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+        <div className="leaderboard-header">
           <span className="feature-kicker">Registry Standings</span>
           <h2 style={{ fontFamily: 'var(--font-sans)', fontStyle: 'normal', fontWeight: '800', fontSize: 'clamp(32px, 4vw, 56px)', marginTop: '6px', letterSpacing: '-0.015em', textTransform: 'lowercase', color: 'var(--color-charcoal)' }}>
             climb to the top 100.
@@ -205,7 +205,7 @@ const Leaderboard = ({ onClose }) => {
 
                     <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginTop: '4px' }}>
                       <a 
-                        href={`https://wa.me/?text=I%20just%20secured%20my%20spot%20on%20Pause%20Hour%20to%20access%205-star%20hotel%20pools%20and%20spas%20by%20the%20hour.%20Skip%20the%20queue%20using%20my%20invite%20link:%20${window.location.origin}/?ref=${userData.referralCode}`} 
+                        href={`https://wa.me/?text=I%20just%20secured%20my%20spot%20on%20Pause%20Hour%20to%20book%20hotel%20pools%20and%20spas%20by%20the%20hour.%20Skip%20the%20queue%20using%20my%20invite%20link:%20${window.location.origin}/?ref=${userData.referralCode}`} 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="btn-pill" 
@@ -226,7 +226,7 @@ const Leaderboard = ({ onClose }) => {
                       </a>
 
                       <a 
-                        href={`https://twitter.com/intent/tweet?text=I%20just%20secured%20my%20spot%20on%20Pause%20Hour%20to%20access%205-star%20hotel%20pools%20and%20spas%20by%20the%20hour.%20Skip%20the%20queue%20using%20my%20invite%20link:%20${window.location.origin}/?ref=${userData.referralCode}`} 
+                        href={`https://twitter.com/intent/tweet?text=I%20just%20secured%20my%20spot%20on%20Pause%20Hour%20to%20book%20hotel%20pools%20and%20spas%20by%20the%20hour.%20Skip%20the%20queue%20using%20my%20invite%20link:%20${window.location.origin}/?ref=${userData.referralCode}`} 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="btn-pill" 

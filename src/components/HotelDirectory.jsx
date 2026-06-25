@@ -216,6 +216,7 @@ const HotelDirectory = () => {
   const [filterOffering, setFilterOffering] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDot, setActiveDot] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const carouselRef = useRef(null);
   const scrollTimeout = useRef(null);
@@ -239,7 +240,7 @@ const HotelDirectory = () => {
       highlight: "Infinity Lap Pool",
       image: poolLapImg,
       pool: true, spa: true, fb: true,
-      desc: "An elevated rooftop lap pool overlooking the lake. Enjoy clean waters, premium sunloungers, and poolside juices by the hour.",
+      desc: "A rooftop lap pool looking out over Durgam Cheruvu lake. Book by the hour to swim, sit by the water, and order fresh fruit juices.",
       rating: "4.9", reviews: 242, priceHr: "₹850", priceDay: "₹2,800", passesLeft: 3,
       lat: "17.4367° N", lng: "78.3741° E", elev: "542m", featured: true
     },
@@ -251,7 +252,7 @@ const HotelDirectory = () => {
       highlight: "Thermal Steam & Massage",
       image: spaMassageImg,
       pool: true, spa: true, fb: true,
-      desc: "Escape for deep physical recovery. Reset in private plunge pools, thermal saunas, or book a premium massage session.",
+      desc: "A quiet space for physical recovery. Access their warm plunge pools, steam rooms, or book a massage session.",
       rating: "4.8", reviews: 184, priceHr: "₹950", priceDay: "₹3,200", passesLeft: 2,
       lat: "17.4248° N", lng: "78.4162° E", elev: "565m", featured: true
     },
@@ -263,7 +264,7 @@ const HotelDirectory = () => {
       highlight: "Garden Dining & Pools",
       image: diningImg,
       pool: true, spa: true, fb: true,
-      desc: "Relax under historical tree shade. Enjoy outdoor dining at garden pavilions and order seasonal fresh food poolside.",
+      desc: "Sit under the shade of mature trees in Banjara Hills. Use their outdoor garden tables and order lunch by the pool.",
       rating: "4.9", reviews: 310, priceHr: "₹750", priceDay: "₹2,500", passesLeft: 5,
       lat: "17.4164° N", lng: "78.4485° E", elev: "550m", featured: true
     },
@@ -275,7 +276,7 @@ const HotelDirectory = () => {
       highlight: "Tranquil Pool & Transit Rest",
       image: lifestyleLoungerImg,
       pool: true, spa: true, fb: true,
-      desc: "A quiet getaway near the airport. The perfect pool and lounge space to wash away transit fatigue before or after a flight.",
+      desc: "A quiet pool and garden lounge near Shamshabad. Use it to wash away travel fatigue before or after your flight.",
       rating: "4.7", reviews: 92, priceHr: "₹650", priceDay: "₹2,000", passesLeft: 6,
       lat: "17.2403° N", lng: "78.4294° E", elev: "610m", featured: true
     },
@@ -287,7 +288,7 @@ const HotelDirectory = () => {
       highlight: "Royal Heritage Pool",
       image: spaSanctuaryImg,
       pool: true, spa: true, fb: true,
-      desc: "Immerse in royalty. Swim in the marble pool and pamper yourself at the Jiva Spa inside the palace walls.",
+      desc: "Swim in the palace courtyard pool and access the Jiva Spa garden relaxation decks.",
       rating: "4.9", reviews: 154, priceHr: "₹1,200", priceDay: "₹4,000", passesLeft: 2,
       lat: "17.3302° N", lng: "78.4682° E", elev: "598m", featured: false
     },
@@ -299,7 +300,7 @@ const HotelDirectory = () => {
       highlight: "Poolside Grill & Cabanas",
       image: poolsideFbImg,
       pool: true, spa: true, fb: true,
-      desc: "Vibrant social pool in the heart of Hitec City. Unwind with premium drinks and custom body massages.",
+      desc: "A pool deck in the middle of Hitec City. Use it to swim, rest, or book a therapeutic massage.",
       rating: "4.8", reviews: 146, priceHr: "₹800", priceDay: "₹2,600", passesLeft: 4,
       lat: "17.4421° N", lng: "78.3792° E", elev: "535m", featured: false
     },
@@ -311,7 +312,7 @@ const HotelDirectory = () => {
       highlight: "Infinity View Spa",
       image: lifestyleStillImg,
       pool: true, spa: true, fb: true,
-      desc: "Overlook the Hitec City skyline from a magnificent infinity deck. Exceptional spa treatments and poolside lunch bars.",
+      desc: "An infinity pool looking out over the Hitec City buildings, with steam saunas and a poolside lunch cafe.",
       rating: "4.7", reviews: 112, priceHr: "₹750", priceDay: "₹2,400", passesLeft: 5,
       lat: "17.4445° N", lng: "78.3780° E", elev: "538m", featured: false
     },
@@ -373,6 +374,18 @@ const HotelDirectory = () => {
     }
   }, [filterRegion, filterOffering, searchQuery]);
 
+  // Auto-scroll loop (3 seconds per card)
+  useEffect(() => {
+    if (isHovered || filteredHotels.length <= 1) return;
+    
+    const timer = setTimeout(() => {
+      const nextIndex = (activeDot + 1) % filteredHotels.length;
+      scrollToIndex(nextIndex);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [activeDot, filteredHotels.length, isHovered]);
+
   // Click outside custom region selector dropdown to close it
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -393,25 +406,15 @@ const HotelDirectory = () => {
     }
     scrollTimeout.current = requestAnimationFrame(() => {
       if (!carouselRef.current) return;
-      const { scrollLeft, clientWidth } = carouselRef.current;
+      const { scrollLeft } = carouselRef.current;
       const cardWidthWithGap = 338;
       
-      // Calculate viewport center scroll offset
-      const viewportCenter = scrollLeft + clientWidth / 2;
-      let closestIndex = 0;
-      let minDistance = Infinity;
-      
-      for (let i = 0; i < filteredHotels.length; i++) {
-        const cardCenter = i * cardWidthWithGap + 155; // 310px card width / 2 = 155px
-        const distance = Math.abs(cardCenter - viewportCenter);
-        if (distance < minDistance) {
-          minDistance = distance;
-          closestIndex = i;
-        }
-      }
+      const closestIndex = Math.round(scrollLeft / cardWidthWithGap);
+      const maxIndex = filteredHotels.length - 1;
+      const finalIndex = Math.max(0, Math.min(maxIndex, closestIndex));
       
       setActiveDot((prev) => {
-        if (prev !== closestIndex) return closestIndex;
+        if (prev !== finalIndex) return finalIndex;
         return prev;
       });
     });
@@ -449,7 +452,7 @@ const HotelDirectory = () => {
             never think about overnight stays again.
           </h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'clamp(15px, 1.8vw, 18px)', lineHeight: '1.6', color: 'rgba(13, 21, 39, 0.7)', maxWidth: '640px', margin: '0 auto' }}>
-            One-tap access to premium daypasses made specifically for your schedule. Pause Hour handles check-ins, reservations, and amenities — so you enjoy five-star retreats on your terms.
+            Book daytime passes that fit your workday. Pause Hour takes care of check-ins and bookings, so you can walk straight to the pool or sauna when you arrive.
           </p>
         </div>
 
@@ -529,7 +532,11 @@ const HotelDirectory = () => {
         </div>
 
         {/* Carousel Container */}
-        <div className="casa-carousel-outer">
+        <div 
+          className="casa-carousel-outer"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           
           {/* Navigation Chevrons */}
           <button 
@@ -581,7 +588,14 @@ const HotelDirectory = () => {
                   key={idx}
                   className={`casa-dot ${activeDot === idx ? 'active' : ''}`}
                   onClick={() => scrollToIndex(idx)}
-                />
+                >
+                  {activeDot === idx && (
+                    <span 
+                      key={`${idx}-${isHovered}`} 
+                      className="casa-dot-progress" 
+                    />
+                  )}
+                </div>
               ))}
             </div>
           )}

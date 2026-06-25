@@ -133,10 +133,10 @@ const WaitlistModal = ({ isOpen, onClose, initialType = 'Pool', prefilledEmail =
 
         {!isSubmitted ? (
           <div className="waitlist-modal-form-wrap">
-            <span className="waitlist-modal-kicker">Priority Registry</span>
+            <span className="waitlist-modal-kicker">Registry Waitlist</span>
             <h2 className="waitlist-modal-title">request access</h2>
             <p className="waitlist-modal-desc">
-              Submit your email to join the Pause Hour private registry. Select your preferred city and hotel destination (optional) to customize your daytime access.
+              Enter your email to join the waitlist. You can select your preferred city and hotel if you have one in mind, or leave it open to see all available properties.
             </p>
 
             <form onSubmit={handleSubmit} className="waitlist-modal-form">
@@ -203,7 +203,7 @@ const WaitlistModal = ({ isOpen, onClose, initialType = 'Pool', prefilledEmail =
 
               {/* Submit Button */}
               <button type="submit" className="waitlist-submit-btn">
-                Request Priority Access
+                Request Waitlist Spot
               </button>
 
             </form>
@@ -217,7 +217,7 @@ const WaitlistModal = ({ isOpen, onClose, initialType = 'Pool', prefilledEmail =
             {/* Retro Ticket Receipt */}
             <div className="boarding-ticket" style={{ fontFamily: 'Courier New, monospace', margin: '0 auto', maxWidth: '380px', '--ticket-cutout-bg': 'var(--color-bg)' }}>
               <div className="ticket-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div className="ticket-title" style={{ fontSize: '10px', color: 'var(--color-accent)' }}>PRIORITY WAITLIST</div>
+                <div className="ticket-title" style={{ fontSize: '10px', color: 'var(--color-accent)' }}>REGISTRY WAITLIST</div>
                 <div className="ticket-logo" style={{ fontSize: '10px', opacity: 0.5 }}>PH // REGISTRY</div>
               </div>
               
@@ -267,7 +267,7 @@ const WaitlistModal = ({ isOpen, onClose, initialType = 'Pool', prefilledEmail =
             </div>
 
             <p style={{ color: 'var(--color-charcoal)', opacity: 0.8, fontSize: '13px', marginTop: '24px', lineHeight: '1.5' }}>
-              We have secured your priority registry slot. Our concierge team will reach out to you at <strong>{email}</strong> as soon as access slots open.
+              Your spot on the waitlist is now locked. We will send an email to <strong>{email}</strong> with an invite code as soon as a slot opens up.
             </p>
 
             <button className="waitlist-close-success-btn" onClick={onClose} style={{ marginTop: '24px' }}>

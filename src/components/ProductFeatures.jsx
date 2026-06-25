@@ -1,29 +1,29 @@
 import React from 'react';
-import poolImg from '../assets/hero_luxury_pool.png';
-import cabanaImg from '../assets/poolside_fb.png'; // poolside dining/leisure
-import spaImg from '../assets/spa_sanctuary.png'; // wellness spa
+import transitImg from '../assets/feature_transit_traveller.png';
+import localImg from '../assets/feature_local_escape.png';
+import corporateImg from '../assets/feature_corporate_relief.png';
 
 const ProductFeatures = () => {
   const features = [
     {
-      kicker: "01 / WFH & Deep Focus",
-      title: "swap your desk for a poolside canopy.",
-      desc: "Upgrade your remote work environment. Gain access to quiet poolside loungers, five-star Wi-Fi, and executive club lounges. Experience deep focus surrounded by gardens and cooling waters.",
-      image: poolImg,
+      kicker: "01 / Transit Travellers",
+      title: "freshen up and recharge between connections.",
+      desc: "Skip the crowded airport lounge. If you have a long layover, book a spa pass to take a hot shower, rest in quiet relaxation rooms, or catch up on work before your next flight, without paying for an overnight hotel room.",
+      image: transitImg,
       reverse: false
     },
     {
-      kicker: "02 / The Mid-Day Reset",
-      title: "decompress between your appointments.",
-      desc: "Recharge your focus in the middle of a busy workday. Take a quick refreshing swim, access steam chambers, or unwind in quiet relaxation zones between meetings.",
-      image: spaImg,
+      kicker: "02 / Locals & Staycationers",
+      title: "enjoy a resort afternoon in your own city.",
+      desc: "You don't need a full weekend trip to escape the city noise. Spend a quiet afternoon swimming laps in outdoor pools, dining with friends in lush hotel gardens, or reading by the poolside, and head back home by dinner.",
+      image: localImg,
       reverse: true
     },
     {
-      kicker: "03 / Micro-Vacations",
-      title: "five-star resort living, for an afternoon.",
-      desc: "Indulge in resort-style luxury without the commitment of an overnight stay. Enjoy garden dining, fresh juices, and massage therapies on your own terms.",
-      image: cabanaImg,
+      kicker: "03 / Corporate Employees",
+      title: "a premium relief for the workday grind.",
+      desc: "Ditch the noisy coffee shop and office cubicle. Swap your screen view for open gardens, work from poolside tables with high-speed internet, or take a quick steam sauna reset between stressful meetings to clear your head.",
+      image: corporateImg,
       reverse: false
     }
   ];
@@ -33,13 +33,13 @@ const ProductFeatures = () => {
       <div className="container">
         
         {/* Section Header */}
-        <div style={{ textAlign: 'center', marginBottom: 'clamp(80px, 8vw, 120px)' }}>
+        <div className="features-header">
           <span className="feature-kicker">Daylight Rituals</span>
           <h2 style={{ fontFamily: 'var(--font-sans)', fontStyle: 'normal', fontWeight: '800', fontSize: 'clamp(32px, 4.5vw, 56px)', marginTop: '6px', letterSpacing: '-0.015em', textTransform: 'lowercase', color: 'var(--color-charcoal)' }}>
             escapes built for your day.
           </h2>
           <p style={{ color: 'var(--color-charcoal)', opacity: 0.7, fontSize: '15px', maxWidth: '600px', margin: '16px auto 0', lineHeight: '1.6' }}>
-            integrate five-star relaxation into your daily schedule. whether you need a quiet space to focus, a mid-day reset, or a weekend micro-vacation.
+            take a few hours to unwind during your busy week. use a quiet space to focus on work, take a quick swim, or spend a slow afternoon outdoors.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ const ProductFeatures = () => {
         <div className="feature-block">
           <div className="feature-img-column">
             <div className="img-reveal-container feature-img-wrap">
-              <img src={features[0].image} alt="WFH & Deep Focus" className="img-reveal in-view" />
+              <img src={features[0].image} alt="Transit Travellers" className="img-reveal in-view" />
             </div>
           </div>
           <div className="feature-info-column">
@@ -61,7 +61,7 @@ const ProductFeatures = () => {
         <div className="feature-block reverse">
           <div className="feature-img-column">
             <div className="img-reveal-container feature-img-wrap">
-              <img src={features[1].image} alt="The Mid-Day Reset" className="img-reveal in-view" />
+              <img src={features[1].image} alt="Locals & Staycationers" className="img-reveal in-view" />
             </div>
           </div>
           <div className="feature-info-column">
@@ -75,7 +75,7 @@ const ProductFeatures = () => {
         <div className="feature-block">
           <div className="feature-img-column">
             <div className="img-reveal-container feature-img-wrap">
-              <img src={features[2].image} alt="Weekend Micro-Vacations" className="img-reveal in-view" />
+              <img src={features[2].image} alt="Corporate Employees" className="img-reveal in-view" />
             </div>
           </div>
           <div className="feature-info-column">

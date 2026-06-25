@@ -13,7 +13,7 @@ const JournalCards = () => {
       id: "lunch-break",
       kicker: "guide / wellness",
       title: "the lunch break upgrade.",
-      excerpt: "How to fit a complete five-star vacation into a Tuesday afternoon lunch slot. We lay out the optimal 3-hour recovery checklist.",
+      excerpt: "How to get the benefits of a full vacation during a Tuesday lunch slot. We lay out a 3-hour guide to disconnect and recharge.",
       image: lifestyleImg,
       summaryText: "Mid-day active recovery cycles resets the cognitive system, boosting decision-making and productivity by resetting cortisol hormone levels back to baseline.",
       studies: [
@@ -154,7 +154,7 @@ const JournalCards = () => {
   return (
     <section id="journal" className="journal-sec" style={{ backgroundColor: 'var(--color-bg)' }}>
       <div className="container">
-        <div className="journal-header" style={{ marginBottom: '100px' }}>
+        <div className="journal-header">
           <span className="feature-kicker">Pause Journal</span>
           <h2 className="journal-header-title reveal-text" style={{ fontFamily: 'var(--font-sans)', fontStyle: 'normal', fontWeight: '800', fontSize: 'clamp(32px, 5vw, 64px)', textTransform: 'lowercase', letterSpacing: '-0.015em', marginTop: '6px' }}>stories from the slow lanes.</h2>
         </div>

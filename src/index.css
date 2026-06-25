@@ -5,6 +5,7 @@
   --color-sand: #C9C0B2;        /* Muted Sand/Stone Neutral */
   --color-accent: #9C8156;      /* Bronze/Gold Accent */
   --color-white: #FFFFFF;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
 
   /* Typography - modern & premium */
   --font-sans: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -618,8 +619,7 @@ a {
 /* Editorial Intro */
 .editorial-intro-sec {
   text-align: center;
-  padding-top: clamp(100px, 12vw, 150px);
-  padding-bottom: clamp(30px, 4vw, 50px);
+  padding: clamp(120px, 12vw, 180px) 0 0;
 }
 
 .editorial-intro-title {
@@ -628,7 +628,7 @@ a {
   font-style: normal;
   font-size: clamp(38px, 5.5vw, 68px);
   max-width: 900px;
-  margin: 0 auto clamp(48px, 6vw, 80px);
+  margin: 0 auto clamp(40px, 5vw, 64px);
   line-height: 1.1;
   letter-spacing: -0.015em;
 }
@@ -791,6 +791,7 @@ a {
   .pass-checkout {
     align-items: flex-end;
     width: auto;
+    min-width: 340px;
   }
 }
 
@@ -805,50 +806,6 @@ a {
   font-size: 14px;
   text-decoration: line-through;
   color: rgba(13, 21, 39, 0.4);
-}
-
-.price-new {
-  font-size: clamp(32px, 3.5vw, 40px);
-  font-weight: 850;
-  color: var(--color-charcoal);
-  letter-spacing: -0.03em;
-}
-
-.price-label {
-  font-size: 10px;
-  color: rgba(13, 21, 39, 0.4);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: block;
-}
-
-.pass-form {
-  width: 100%;
-}
-
-.pass-success-message {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(22, 163, 74, 0.05);
-  border: 1px solid rgba(22, 163, 74, 0.2);
-  border-radius: 16px;
-  padding: 12px 18px;
-  width: 100%;
-  text-align: left;
-}
-
-.success-check {
-  background: #16a34a;
-  color: #FFFFFF;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 11px;
 }
 
 .price-new {
@@ -997,7 +954,12 @@ a {
 
 /* Core Product Features */
 .features-sec {
-  padding: clamp(120px, 15vw, 200px) 0;
+  padding: 0 0 clamp(120px, 12vw, 180px);
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: clamp(60px, 7vw, 90px);
 }
 
 .feature-block {
@@ -1005,7 +967,7 @@ a {
   grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
-  margin-bottom: clamp(100px, 15vw, 200px);
+  margin-bottom: clamp(120px, 12vw, 180px);
 }
 
 .feature-block:last-child {
@@ -1093,12 +1055,12 @@ a {
 .userflow-sec {
   background-color: var(--color-charcoal);
   color: var(--color-bg);
-  padding: clamp(120px, 15vw, 200px) 0;
+  padding: clamp(120px, 12vw, 180px) 0;
 }
 
 .userflow-header {
   text-align: center;
-  margin-bottom: clamp(70px, 8vw, 110px);
+  margin-bottom: clamp(60px, 7vw, 90px);
 }
 
 .userflow-grid {
@@ -1391,7 +1353,7 @@ a {
 
 /* Trust Section */
 .trust-sec {
-  padding: clamp(120px, 15vw, 200px) 0;
+  padding: clamp(120px, 12vw, 180px) 0 0;
   background-color: var(--color-bg);
 }
 
@@ -1436,12 +1398,11 @@ a {
 
 /* Journal Section */
 .journal-sec {
-  padding: clamp(120px, 15vw, 200px) 0;
-  border-top: 1px solid rgba(21, 25, 27, 0.08);
+  padding: clamp(120px, 12vw, 180px) 0 0;
 }
 
 .journal-header {
-  margin-bottom: 60px;
+  margin-bottom: clamp(48px, 6vw, 72px);
 }
 
 .journal-header-title {
@@ -1540,8 +1501,7 @@ a {
 .press-sec {
   background-color: var(--color-charcoal);
   color: var(--color-bg);
-  padding: 80px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: clamp(120px, 12vw, 180px) 0 0;
 }
 
 .press-title {
@@ -1552,7 +1512,7 @@ a {
   letter-spacing: 0.25em;
   color: var(--color-sand);
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .press-logos-row {
@@ -1611,7 +1571,7 @@ a {
 .footer-sec {
   background-color: var(--color-charcoal);
   color: var(--color-bg);
-  padding-top: clamp(100px, 15vw, 200px);
+  padding-top: clamp(120px, 12vw, 180px);
 }
 
 .footer-mega-headline {
@@ -1622,14 +1582,14 @@ a {
   color: var(--color-white);
   line-height: 1.0;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 48px;
   letter-spacing: -0.04em;
 }
 
 .footer-cta-wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: clamp(80px, 10vw, 140px);
+  margin-bottom: clamp(100px, 12vw, 180px);
 }
 
 /* Lifestyle Strip */
@@ -1637,7 +1597,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  margin-bottom: clamp(60px, 10vw, 120px);
+  margin-bottom: clamp(90px, 11vw, 150px);
 }
 
 @media (min-width: 768px) {
@@ -1794,13 +1754,13 @@ a {
 /* Casa-Style Carousel Directory */
 .casa-directory-sec {
   background-color: var(--color-bg);
-  padding: clamp(120px, 15vw, 200px) 0;
+  padding: 0 0 clamp(120px, 12vw, 180px);
 }
 
 .casa-header-wrap {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto clamp(80px, 8vw, 120px) auto;
+  margin: 0 auto clamp(60px, 7vw, 90px) auto;
   padding: 0 24px;
 }
 
@@ -1987,7 +1947,7 @@ a {
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  padding: 40px 4px 60px 4px;
+  padding: 40px calc(50% - 155px) 60px calc(50% - 155px);
   width: 100%;
   -webkit-overflow-scrolling: touch;
 }
@@ -2296,12 +2256,38 @@ a {
   background: rgba(13, 21, 39, 0.15);
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .casa-dot.active {
+  background: rgba(13, 21, 39, 0.1);
+  width: 32px;
+  border-radius: 4px;
+}
+
+.casa-dot-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
   background: var(--color-charcoal);
-  width: 18px;
-  border-radius: 99px;
+  border-radius: inherit;
+  animation: dotProgress 3s linear forwards;
+}
+
+@keyframes dotProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.casa-carousel-outer:hover .casa-dot-progress {
+  animation-play-state: paused;
 }
 
 .showcase-price-block {
@@ -3041,7 +3027,6 @@ a {
   .reader-left-col {
     position: sticky;
     top: 120px;
-    align-self: start;
   }
 }
 
@@ -3452,8 +3437,12 @@ a {
 /* Leaderboard Section Styles */
 .leaderboard-sec {
   background-color: var(--color-bg);
-  padding: clamp(120px, 15vw, 200px) 0;
-  border-top: 1px solid rgba(13, 21, 39, 0.05);
+  padding: clamp(120px, 12vw, 180px) 0;
+}
+
+.leaderboard-header {
+  text-align: center;
+  margin-bottom: clamp(48px, 6vw, 72px);
 }
 .leaderboard-close-btn {
   position: absolute;
@@ -3754,14 +3743,13 @@ a {
 
 /* FAQ Section */
 .faq-sec {
-  padding: clamp(120px, 15vw, 200px) 0;
+  padding: clamp(120px, 12vw, 180px) 0;
   background-color: var(--color-bg);
-  border-top: 1px solid rgba(21, 25, 27, 0.08);
 }
 
 .faq-header {
   text-align: center;
-  margin-bottom: clamp(70px, 8vw, 110px);
+  margin-bottom: clamp(60px, 7vw, 90px);
 }
 
 .faq-container {
@@ -3823,5 +3811,61 @@ a {
   line-height: 1.6;
   color: var(--color-charcoal);
   opacity: 0.85;
+}
+
+/* ---------------------------------------------------- */
+/* UI/UX EXPERT POLISH & OVERRIDES                       */
+/* ---------------------------------------------------- */
+
+/* Serif Typography Override for Editorial Character */
+.hero-title,
+.editorial-intro-title,
+.features-sec h2,
+.casa-header-wrap h2,
+.userflow-header h2,
+.trust-sec h3,
+.journal-header-title,
+.journal-card-title,
+.pass-title,
+.faq-sec h2,
+.leaderboard-sec h2,
+.footer-mega-headline,
+.waitlist-modal-title {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  text-transform: none !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Horizontal Gallery Section Spacing */
+.gallery-sec {
+  padding: clamp(60px, 6vw, 90px) 0 clamp(120px, 12vw, 180px) !important;
+}
+
+/* Hotel Card Luxury Hover Micro-interactions */
+.casa-hotel-card {
+  transition: transform 0.8s var(--ease-editorial), opacity 0.8s var(--ease-editorial), z-index 0.8s var(--ease-editorial) !important;
+}
+
+/* Zoom background image */
+.casa-card-bg-img {
+  transition: transform 1.2s var(--ease-editorial) !important;
+}
+
+.casa-hotel-card:hover .casa-card-bg-img {
+  transform: scale(1.06) !important;
+}
+
+/* Lift floating glass panel */
+.casa-card-panel {
+  transition: transform 0.8s var(--ease-editorial), background-color 0.8s var(--ease-editorial), border-color 0.8s var(--ease-editorial) !important;
+}
+
+.casa-hotel-card:hover .casa-card-panel {
+  transform: translateY(-8px) !important;
+  background-color: rgba(255, 255, 255, 0.45) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 20px 40px rgba(13, 21, 39, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
 }
 

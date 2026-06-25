@@ -13,14 +13,14 @@ const TrustStory = () => {
             <div className="trust-narrative-block" style={{ marginTop: '12px' }}>
               <h3 className="reveal-text" style={{ fontFamily: 'var(--font-sans)', fontWeight: '800', fontSize: 'clamp(24px, 3vw, 40px)', textTransform: 'lowercase', letterSpacing: '-0.02em' }}>luxury, minus the overnight price tag.</h3>
               <p className="reveal-text" style={{ color: 'var(--color-charcoal)', opacity: 0.8, fontSize: '15px', lineHeight: '1.6', marginTop: '20px' }}>
-                We started Pause Hour because we love hotel amenities—but we don't always need a room. The finest pools, saunas, and garden verandas at premium properties like Taj Krishna and ITC Kohenur sit quiet during the day. We partner with these top-tier hotels in Hyderabad to open up their facilities by the hour.
+                We started Pause Hour because we wanted to use hotel pools and garden terraces without having to book a room. During the day, pools and steam rooms at hotels like Taj Krishna and ITC Kohenur are mostly empty. We partner with these hotels in Hyderabad to let you use their spaces by the hour.
               </p>
             </div>
 
             <div className="trust-narrative-block" style={{ marginTop: '48px' }}>
               <h3 className="reveal-text" style={{ fontFamily: 'var(--font-sans)', fontWeight: '800', fontSize: 'clamp(24px, 3vw, 40px)', textTransform: 'lowercase', letterSpacing: '-0.02em' }}>how it works.</h3>
               <p className="reveal-text" style={{ color: 'var(--color-charcoal)', opacity: 0.8, fontSize: '15px', lineHeight: '1.6', marginTop: '20px' }}>
-                Just select your preferred hotel area—whether in Gachibowli, Banjara Hills, Jubilee Hills, Hitec City, or Falaknuma. Choose your experience, select a time slot, and check in digitally. Walk past the lobby directly to your destination. No long check-in queues, no membership fees.
+                Select the hotel near you—whether in Gachibowli, Banjara Hills, Jubilee Hills, Hitec City, or Falaknuma. Pick your time, check in on your phone, and head straight to the pool or deck. You skip the front desk queues and pay no sign-up fees.
               </p>
             </div>
           </div>

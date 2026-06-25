@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import heroImage from '../assets/hero_luxury_pool.png';
 import rooftopPoolImg from '../assets/rooftop_pool_dusk.png';
 import thermalSpaImg from '../assets/wellness_thermal_spa.png';
-import sunsetLoungeImg from '../assets/poolside_sunset_lounge.png';
+import newSpaMistImg from '../assets/new_hero_spa_mist.png';
+import newDuskPoolImg from '../assets/new_hero_dusk_pool.png';
 import { getWaitlistData, registerWaitlist, subscribeWaitlist } from '../utils/waitlistStore';
 
 const Hero = ({ onShowRankings, onOpenWaitlist }) => {
@@ -11,10 +11,10 @@ const Hero = ({ onShowRankings, onOpenWaitlist }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slideImages = [
-    { src: heroImage, alt: "Pause Hour Luxury Resort Pool in Hyderabad" },
-    { src: rooftopPoolImg, alt: "Luxury hotel rooftop infinity pool at dusk" },
-    { src: thermalSpaImg, alt: "Luxury indoor wellness thermal spa mineral sanctuary" },
-    { src: sunsetLoungeImg, alt: "Exclusive poolside sunset garden dining lounge" }
+    { src: thermalSpaImg, alt: "Indoor thermal bath pool with stone columns and rising steam" },
+    { src: newSpaMistImg, alt: "Minimalist luxury thermal bath pool with sunlight streaming through tall windows" },
+    { src: rooftopPoolImg, alt: "Boutique hotel rooftop infinity pool looking out over the city skyline at dusk" },
+    { src: newDuskPoolImg, alt: "Luxury boutique hotel swimming pool at night with warm yellow underwater lights" }
   ];
 
   useEffect(() => {
@@ -87,12 +87,12 @@ const Hero = ({ onShowRankings, onOpenWaitlist }) => {
             letterSpacing: '-0.02em',
             lineHeight: 1.25
           }}>
-            daylight escapes at the city's finest five-star destinations.
+            swim in ITC Kohenur's rooftop pool or rest in Taj's gardens for an afternoon, without booking a room.
           </h3>
  
           {/* Description */}
           <p className="hero-desc reveal-text" style={{ margin: '0 auto', maxWidth: '620px', fontSize: 'clamp(15px, 1.3vw, 18px)', lineHeight: '1.65', color: '#FFFFFF', opacity: 0.95, textShadow: '0 2px 12px rgba(0, 0, 0, 0.45)' }}>
-            unlock hourly daytime access to premier five-star hotel pools, thermal spas, and private lounges. no overnight stay required.
+            book swimming lanes, steam saunas, and outdoor dining tables by the hour. no room booking required.
           </p>
 
           {/* Waitlist Form - Centered at the bottom of hero with very good padding */}

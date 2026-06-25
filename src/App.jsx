@@ -51,13 +51,11 @@ function App() {
     ScrollTrigger.refresh();
   }, [showLeaderboard]);
 
-  // Capture and store referral codes on load
+  // Clean up legacy local data on load
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const refCode = params.get('ref');
-    if (refCode) {
-      sessionStorage.setItem('ph_referred_by', refCode);
-    }
+    localStorage.removeItem('ph_waitlist');
+    localStorage.removeItem('ph_mock_referrals');
+    sessionStorage.removeItem('ph_referred_by');
   }, []);
 
   // Initialize Lenis smooth scroll

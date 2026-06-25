@@ -98,7 +98,7 @@ const FooterMegaCTA = ({ onShowRankings, onOpenWaitlist }) => {
           ) : (
             <div style={{ textAlign: 'center', animation: 'fadeIn 0.6s ease', padding: '24px 0' }}>
               <div style={{ color: '#22c55e', fontWeight: '700', fontSize: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '12px' }}>
-                <span className="success-check" style={{ width: '20px', height: '20px', fontSize: '10px' }}>✓</span> priority registry spot secured
+                <span className="success-check" style={{ width: '20px', height: '20px', fontSize: '10px' }}>✓</span> waitlist spot secured
               </div>
               <p style={{ color: 'var(--color-sand)', fontSize: '14px', margin: '0 0 24px 0', opacity: 0.9, lineHeight: '1.5', maxWidth: '420px', marginLeft: 'auto', marginRight: 'auto' }}>
                 ₹1,000 launch credit reserved for <strong>{userData.email}</strong>. Your current standing is <strong>#{userData.queuePosition}</strong>.

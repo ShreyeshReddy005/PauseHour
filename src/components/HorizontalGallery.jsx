@@ -22,7 +22,7 @@ const HorizontalGallery = () => {
   ];
 
   return (
-    <section id="gallery" style={{ padding: '20px 0 100px', backgroundColor: 'var(--color-bg)', overflow: 'hidden' }}>
+    <section id="gallery" className="gallery-sec" style={{ backgroundColor: 'var(--color-bg)', overflow: 'hidden' }}>
       <div className="container">
         
         {/* Scattered Cards Container */}
@@ -56,8 +56,8 @@ const HorizontalGallery = () => {
               <div className="pass-badge">Exclusive Offer</div>
               <h3 className="pass-title" style={{ fontFamily: 'var(--font-sans)', fontWeight: '800', letterSpacing: '-0.02em', fontSize: 'clamp(28px, 3.2vw, 42px)', color: 'var(--color-charcoal)' }}>get a pause pass.</h3>
               <p className="pass-desc" style={{ marginTop: '12px' }}>
-                A premium bundled credit daypass for <strong>Pool</strong>, <strong>Spa</strong>, and <strong>F&B</strong> sessions. 
-                Experience a complete midday escape at any of our 25 partner luxury hotels.
+                Get access to a pool, a spa session, and dining credits in one single pass. 
+                Use it at any of our 25 partner hotels whenever you need a few hours to recharge.
               </p>
             </div>
 
@@ -85,7 +85,7 @@ const HorizontalGallery = () => {
                   >
                     <input
                       type="email"
-                      placeholder="enter email to reserve pass..."
+                      placeholder="enter your email..."
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
@@ -98,8 +98,7 @@ const HorizontalGallery = () => {
                         fontFamily: 'var(--font-sans)',
                         fontSize: '13px',
                         padding: '6px 0',
-                        letterSpacing: '0.04em',
-                        width: '60%'
+                        letterSpacing: '0.04em'
                       }}
                     />
                     <button 

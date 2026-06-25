@@ -67,42 +67,42 @@ const UserFlow = () => {
     {
       num: "01",
       title: "discover & book",
-      desc: "discover in the app and book it instantly with your membership rate.",
+      desc: "find a nearby hotel in the app and book your pool or spa hours instantly.",
       icon: DiscoverIcon,
       iconClass: "userflow-icon-phone"
     },
     {
       num: "02",
       title: "arrive & scan",
-      desc: "visit the partner hotel, leave your bags securely at the desk, and scan the QR code to check in.",
+      desc: "head to the hotel, store your bags at the reception desk, and scan our QR code at the entrance.",
       icon: ArriveIcon,
       iconClass: "userflow-icon-scan"
     },
     {
       num: "03",
       title: "wear the band",
-      desc: "receive and wear a smart wrist band to unlock access to all partner facilities.",
+      desc: "put on the check-in wristband to unlock the pool gates and sauna doors.",
       icon: WristbandIcon,
       iconClass: "userflow-icon-wristband"
     },
     {
       num: "04",
       title: "enjoy amenities",
-      desc: "unwind and enjoy premium amenities like the rooftop infinity pool and luxury thermal spas.",
+      desc: "swim in the rooftop infinity pools or spend time in the hot saunas.",
       icon: AmenitiesIcon,
       iconClass: "userflow-icon-amenities"
     },
     {
       num: "05",
       title: "redeem credits",
-      desc: "use your inclusive F&B credits and enjoy premium fine dining by the pool or in the lounge.",
+      desc: "spend your dining credits on food and drinks at the poolside cafe or garden lounge.",
       icon: DiningIcon,
       iconClass: "userflow-icon-dining"
     },
     {
       num: "06",
       title: "relax & depart",
-      desc: "relax in the quiet club lounge for as long as you like, then return the band and head out.",
+      desc: "rest in the quiet lounge areas, hand back your wristband, and leave when you are ready.",
       icon: DepartIcon,
       iconClass: "userflow-icon-depart"
     }

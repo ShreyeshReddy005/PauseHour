@@ -11,28 +11,28 @@ const PressWall = () => {
     {
       source: "condé nast traveller",
       logoText: "CN TRAVELLER",
-      quote: "“Pause Hour is making luxury hotel amenities accessible to everyone, by the hour.”",
+      quote: "“Pause Hour lets people book hotel pools and gardens by the hour.”",
       image: poolLapImg,
       link: "https://www.cntraveller.in"
     },
     {
       source: "architectural digest",
       logoText: "ARCHITECTURAL DIGEST",
-      quote: "“An absolute game-changer for remote workers seeking a premium change of scenery.”",
+      quote: "“A way for remote workers to swap their desks for a poolside lounge with high-speed internet.”",
       image: spaMassageImg,
       link: "https://www.architecturaldigest.in"
     },
     {
       source: "the lister",
       logoText: "THE LISTER",
-      quote: "“The ultimate mid-week recharge button. Five-star pools and spas are now a tap away.”",
+      quote: "“A quick midday break. You can now book quiet steam saunas and swim lanes in 10 seconds.”",
       image: poolsideFbImg,
       link: "https://www.lister.com"
     },
     {
       source: "elite hospitality",
       logoText: "ELITE HOSPITALITY",
-      quote: "“Say goodbye to overnight rates. Access premium swimming facilities for just a few quiet hours.”",
+      quote: "“No more paying for overnight rooms. You can now use hotel lap pools for just a couple of hours.”",
       image: lifestyleStillImg,
       link: "https://www.elitehospitality.com"
     }

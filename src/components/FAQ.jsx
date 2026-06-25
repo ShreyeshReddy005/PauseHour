@@ -54,23 +54,23 @@ const FAQ = () => {
   const faqData = [
     {
       question: "what is pause hour?",
-      answer: "Pause Hour is a private registry that partners with luxury five-star hotels to offer daytime access to their premium amenities (swimming pools, thermal spas, and poolside dining) on an hourly basis. No overnight stay is required."
+      answer: "Pause Hour is a platform that lets you book swimming pools, steam saunas, and outdoor dining tables at local hotels by the hour. You don't have to book a room or check in overnight."
     },
     {
       question: "how does booking work?",
-      answer: "Once your waitlist spot is secured and you are invited to join, you can explore partner hotels on our app, select a time slot, and check in digitally. You'll receive a digital pass and a smart band at the hotel lobby."
+      answer: "Once you are invited to join, you can browse partner hotels on our app, select your time, and check in on your phone. You'll get a digital pass and a wristband at the hotel lobby to access the facilities."
     },
     {
       question: "what is included in the daytime pass?",
-      answer: "Each pass includes access to the selected hotel's pool and spa facilities during your booked slot, plus food and beverage credits that can be redeemed at their poolside restaurants or bars."
+      answer: "Your pass unlocks the hotel pool and sauna facilities for your chosen hours, along with dining credits you can spend on food and drinks at their outdoor cafes and bars."
     },
     {
       question: "which hotels are in the network?",
-      answer: "We partner with Hyderabad's leading five-star properties, including ITC Kohenur, Park Hyatt, Taj Krishna, Trident, and more, across key areas like Gachibowli, Banjara Hills, Jubilee Hills, and Hitec City."
+      answer: "We partner with hotels in Hyderabad, including ITC Kohenur, Park Hyatt, Taj Krishna, and Trident, across areas like Gachibowli, Banjara Hills, Jubilee Hills, and Hitec City."
     },
     {
       question: "how can I get priority access?",
-      answer: "You can refer friends using your unique referral code. Every verified referral boosts your standing in the registry. The top 100 waitlist candidates secure immediate priority access and a ₹1,000 launch credit."
+      answer: "You can share your referral code with friends. Each signup moves you up the waitlist. The top 100 people on the list get invited first and receive a ₹1,000 credit to spend on their first booking."
     }
   ];
 

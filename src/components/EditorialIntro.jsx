@@ -8,7 +8,7 @@ const EditorialIntro = () => {
           rediscover the art of stillness.
         </h2>
         <p className="editorial-intro-text reveal-text">
-          we believe five-star restoration should fit seamlessly into your week, not just your weekends. Pause Hour partners with leading luxury hotels to grant daytime access to pristine swimming basins, thermal stone spas, and open-air dining. by bypassing check-in queues and massive overnight bills, we offer a micro-sanctuary right in your city.
+          we believe a complete reset shouldn't require a weekend trip. instead of booking pools, spas, or dining separately, the Pause Pass combines them into a single ticket for a full reset day: spend two hours by the water, melt away tension in the steam sauna for thirty minutes, and enjoy courtyard dining credits. it is a complete, unhurried escape designed to recharge your mind in a single afternoon.
         </p>
       </div>
     </section>
